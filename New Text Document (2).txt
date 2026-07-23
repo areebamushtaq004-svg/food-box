@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheezious Clone - Delivering Cheezy Khushiyan</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">CHEEZIOUS</div>
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#deals">Deals</a>
+                <a href="#app">App</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="toggle-switch">
+                    <span class="active">Delivery</span>
+                    <span>Pick-up</span>
+                </div>
+                <a href="#" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <a href="#" class="btn-login">Login</a>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Delivering <span class="highlight">Cheezy Khushiyan</span></h1>
+            <p>Fastest Growing Brand of the Year. Made with fresh, local ingredients and love.</p>
+            <a href="#menu" class="btn-primary">Order Now</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container feature-grid">
+            <div class="feature-card">
+                <i class="fas fa-shipping-fast"></i>
+                <h3>Fast Delivery</h3>
+                <p>Hot and fresh at your doorstep in minutes.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-leaf"></i>
+                <h3>Fresh Ingredients</h3>
+                <p>Made with 100% local and fresh ingredients.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-award"></i>
+                <h3>Best Quality</h3>
+                <p>Award-winning taste you won't find anywhere else.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <h2 class="section-title">Our Popular Menu</h2>
+            <div class="menu-grid">
+                <!-- Item 1 -->
+                <div class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80" alt="Pizza">
+                    <div class="menu-info">
+                        <h3>Cheezious Special Pizza</h3>
+                        <p>Loaded with extra cheese, chicken tikka, and jalapeños.</p>
+                        <div class="price-action">
+                            <span class="price">PKR 1,299</span>
+                            <button class="btn-add" onclick="addToCart()">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=500&q=80" alt="Pizza">
+                    <div class="menu-info">
+                        <h3>Pepperoni Feast</h3>
+                        <p>Classic pepperoni with mozzarella and our signature sauce.</p>
+                        <div class="price-action">
+                            <span class="price">PKR 1,499</span>
+                            <button class="btn-add" onclick="addToCart()">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1573821663912-569905455b1c?auto=format&fit=crop&w=500&q=80" alt="Garlic Bread">
+                    <div class="menu-info">
+                        <h3>Cheesy Garlic Bread</h3>
+                        <p>Freshly baked bread topped with garlic butter and cheese.</p>
+                        <div class="price-action">
+                            <span class="price">PKR 499</span>
+                            <button class="btn-add" onclick="addToCart()">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Download Section -->
+    <section class="app-download" id="app">
+        <div class="container app-container">
+            <div class="app-text">
+                <h2>Download Our Mobile App</h2>
+                <p>Elevate your experience by downloading our mobile app for seamless ordering and exclusive deals.</p>
+                <div class="app-buttons">
+                    <button class="btn-store"><i class="fab fa-apple"></i> App Store</button>
+                    <button class="btn-store"><i class="fab fa-google-play"></i> Google Play</button>
+                </div>
+            </div>
+            <div class="app-image">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=400&q=80" alt="Mobile App">
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Special Offers & News</h2>
+            <p>Subscribe now for news, promotions and more delivered right to your inbox.</p>
+            <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>CHEEZIOUS</h3>
+                <p>Delivering cheezy khushiyan since day one.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="#">About Us</a>
+                <a href="#">Menu</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Cheezious Copyright © 2026. All Rights Reserved. Prices are Inclusive of tax.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #E31837; /* Cheezious Red */
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-weight: 600;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #E31837;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.toggle-switch {
+    background: #f0f0f0;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.toggle-switch span {
+    padding: 5px 15px;
+    border-radius: 15px;
+}
+
+.toggle-switch span.active {
+    background: #E31837;
+    color: white;
+}
+
+.cart-icon {
+    position: relative;
+    font-size: 20px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #FFC72C; /* Cheese Yellow */
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-login {
+    background: #E31837;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-login:hover {
+    background: #c41230;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #FFC72C;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background: #E31837;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #c41230;
+    transform: translateY(-3px);
+}
+
+/* Features */
+.features {
+    padding: 60px 0;
+    background: white;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.feature-card {
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card i {
+    font-size: 40px;
+    color: #E31837;
+    margin-bottom: 15px;
+}
+
+/* Menu Section */
+.menu {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #222;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.menu-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-info {
+    padding: 20px;
+}
+
+.menu-info h3 {
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.menu-info p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.price-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #E31837;
+}
+
+.btn-add {
+    background: #FFC72C;
+    color: #000;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-add:hover {
+    background: #e6b225;
+}
+
+/* App Download */
+.app-download {
+    background: #1a1a1a;
+    color: white;
+    padding: 80px 0;
+}
+
+.app-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.app-text {
+    flex: 1;
+}
+
+.app-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FFC72C;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-store {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s;
+}
+
+.btn-store:hover {
+    background: #E31837;
+    border-color: #E31837;
+}
+
+.app-image {
+    flex: 1;
+    text-align: center;
+}
+
+.app-image img {
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Newsletter */
+.newsletter {
+    padding: 80px 0;
+    text-align: center;
+    background: #fff;
+}
+
+.newsletter h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.subscribe-form {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: #aaa;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h3 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.footer-col h4 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer-col a {
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.footer-col a:hover {
+    color: #FFC72C;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .app-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .app-buttons {
+        justify-content: center;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+    }
+}
+// Mobile Menu Toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Simple Cart Functionality
+let cartCount = 0;
+const cartCountElement = document.getElementById('cartCount');
+
+function addToCart() {
+    cartCount++;
+    cartCountElement.innerText = cartCount;
+    
+    // Animation effect for cart
+    cartCountElement.style.transform = "scale(1.5)";
+    setTimeout(() => {
+        cartCountElement.style.transform = "scale(1)";
+    }, 200);
+
+    alert("Item added to cart successfully! 🍕");
+}
+
+// Delivery/Pickup Toggle Switch
+const toggleSpans = document.querySelectorAll('.toggle-switch span');
+toggleSpans.forEach(span => {
+    span.addEventListener('click', () => {
+        toggleSpans.forEach(s => s.classList.remove('active'));
+        span.classList.add('active');
+    });
+});
+
+// Smooth Scrolling for Navigation Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        navLinks.classList.remove('active'); // Close mobile menu on click
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
